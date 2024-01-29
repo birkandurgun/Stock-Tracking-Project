@@ -18,6 +18,25 @@
 
 5. **Filter:**
    - Users can filter data by entering search terms into the required search boxes.
-   
-5. **Filter:**
-   - Users can filter data by entering search terms into the required search boxes.
+
+# Screenshots
+
+## Sign Up and Log In
+
+![signup](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/registration.png) ![login](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/login.png)
+
+## Listing in a table
+
+![listCategory](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/categoryList.png) ![listProduct](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/productList.png)
+
+## Adding new Category and Product
+
+![addCategory](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/addCategory.png) ![addProduct](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/addProduct.png)
+
+## Updating Product
+
+![updateProduct](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/updateProduct.png) ![updatedRow](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/updatedRow.png)
+
+## Filter
+
+![filter](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/filter.png)
