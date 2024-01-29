@@ -1,0 +1,33 @@
+﻿@model stockTracking.Models.Entity.category
+
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<style>
+    .label-text {
+        font-weight: bold;
+    }
+</style>
+
+<div class="headd">
+    <h3><i class="fa-solid fa-tag"></i> Add Category</h3>
+</div>
+
+<div style="float: left;width: 100%;padding-top: 10px;">
+    <form method="post" style="display: inline-block;margin-left: 10px;width: 80%;">
+
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="cName" class="form-label label-text">Category Name: </label>
+            <input type="text" class="form-control" id="cName" name="cName">
+            @Html.ValidationMessage("cName", new { @style = "color:red;font-weight:bold" })
+        </div>
+        
+        <div class="mt-4" id="btn">
+            <button type="submit" class="btn btn-primary btn-lg" id="btnEkle">Add</button>
+        </div>
+
+    </form>
+</div>
+
+

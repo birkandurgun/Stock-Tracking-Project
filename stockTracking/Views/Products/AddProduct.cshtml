@@ -1,0 +1,57 @@
+﻿@model stockTracking.ViewModals.AddProductViewModel
+
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<style>
+    .label-text {
+        font-weight: bold;
+    }
+</style>
+<title>Add Product</title>
+<div class="headd">
+    <h3><i class="fa-solid fa-tag"></i> Add Product</h3>
+</div>
+<div style="float: left;width: 100%;padding-top: 10px;">
+    <form method="post" style="display: inline-block;margin-left: 10px;width: 80%;">
+
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="ProductModel_pName" class="form-label label-text">Product Name: </label>
+            <input type="text" class="form-control" id="ProductModel_pName" name="ProductModel.pName">
+            @Html.ValidationMessageFor(m => m.ProductModel.pName, "", new { @style = "color:red;font-weight:bold" })
+        </div>
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="ProductModel_pDescription" class="form-label label-text">Description: </label>
+            <input type="text" class="form-control" id="ProductModel_pDescription" name="ProductModel.pDescription">
+            <div class="form-text">A short information of the product</div>
+            @Html.ValidationMessageFor(m => m.ProductModel.pDescription, "", new { @style = "color:red;font-weight:bold" })
+        </div>
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="ProductModel_pQuantity" class="form-label label-text">Quantity: </label>
+            <input type="number" class="form-control" id="ProductModel_pQuantity" name="ProductModel.pQuantity">
+            <div id="birimFiyati" class="form-text"></div>
+        </div>
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="ProductModel_pPrice" class="form-label label-text">Price: </label>
+            <input type="number" class="form-control" id="ProductModel_pPrice" name="ProductModel.pPrice">
+            @Html.ValidationMessageFor(m => m.ProductModel.pPrice, "", new { @style = "color:red;font-weight:bold" })
+        </div>
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="ProductModel_pBrand" class="form-label label-text">Brand: </label>
+            <input type="text" class="form-control" id="ProductModel_pBrand" name="ProductModel.pBrand">
+            @Html.ValidationMessageFor(m => m.ProductModel.pBrand, "", new { @style = "color:red;font-weight:bold" })
+        </div>
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="ProductModel_pCategory" class="form-label label-text">Category: </label>
+            @Html.DropDownListFor(m => m.ProductModel.pCategory, Model.Categories, "Select Category", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ProductModel.pCategory, "", new { @style = "color:red;font-weight:bold" })
+        </div>
+
+
+        <div class="mt-4" id="btn">
+            <button type="submit" class="btn btn-primary btn-lg" id="btnEkle">Add</button>
+        </div>
+    </form>
+</div>
+

@@ -1,0 +1,70 @@
+﻿@using stockTracking.Models.Entity;
+@model List<products>
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<title>Stock List</title>
+
+<div class="headd">
+    <h3><i class="fa-solid fa-cubes"></i> Stock List</h3>
+</div>
+
+<div style="float: left;width: 100%;padding-top: 30px;padding-left: 30px;">
+    <input type="text" class="form-control mb-3" id="productName" placeholder="Filter By Product Name" style="display: inline-block;width: 15%;">
+    <input type="text" class="form-control mb-3" id="description" placeholder="Filter By Description" style="display: inline-block;width: 20%;">
+    <input type="text" class="form-control mb-3" id="quantityMin" placeholder="Filter By Min Quantity" style="display: inline-block;width: 15%;">
+    <input type="text" class="form-control mb-3" id="quantityMax" placeholder="Filter By Max Quantity" style="display: inline-block;width: 15%;">
+    <input type="text" class="form-control mb-3" id="price" placeholder="Filter By Price" style="display: inline-block;width: 15%;">
+    <input type="text" class="form-control mb-3" id="brand" placeholder="Filter By Brand" style="display: inline-block;width: 15%;">
+    <input type="text" class="form-control mb-3 " id="category" placeholder="Filter By Category" style="display: inline-block;width: 15%;">
+</div>
+
+<div class="alert alert-light" role="alert" style="float: left;width: 100%;margin-left: 30px;margin-top: 10px">
+    <p>Welcome <strong>@HttpContext.Current.User.Identity.Name</strong></p>
+    <p>There are <strong>@Model.Count</strong> products in the stock.</p>
+</div>
+
+<div style="float: left;width: 100%;margin-top: 20px;">
+    <table class="table table-hover" id="table" style="margin-left: 30px;">
+        <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.pName</td>
+                    <td>@product.pDescription</td>
+                    <td>@product.pQuantity</td>
+                    <td>@product.pPrice</td>
+                    <td>@product.pBrand</td>
+                    <td>@product.pCategory</td>
+                    <td>
+                        <a href="@Url.Action("DeleteProduct", "Products", new { pName = product.pName })"
+                           onclick="return confirm('Are you sure you want to delete?')">
+                                <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #9e0000;"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("GetUpdateProduct", "Products", new { pName = product.pName })"
+                           onclick="return confirm('Are you sure you want to edit?')">
+                            <i class="fa-solid fa-pencil fa-2xl" style="color: #00b315;"></i>
+
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+<script type="text/javascript" src="~/Content/filter.js"></script>

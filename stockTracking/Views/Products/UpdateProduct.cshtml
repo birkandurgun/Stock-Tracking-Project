@@ -1,0 +1,46 @@
+﻿@model stockTracking.ViewModals.AddProductViewModel
+
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<style>
+    .label-text {
+        padding-top: 30px;
+        font-weight: bold;
+    }
+</style>
+<title>Update Product</title>
+<div class="headd">
+    <h3><i class="fa-solid fa-pencil fa-sm"></i> Update Product</h3>
+</div>
+
+@using (Html.BeginForm("UpdateProduct", "Products", FormMethod.Post))
+{
+    <div class="form-group" style="float: left;width: 100%;padding-top: 10px; margin-left: 10px; ">
+        @Html.LabelFor(m => m.ProductModel.pName, new { @class = "form-label label-text" })
+        @Html.TextBoxFor(m => m.ProductModel.pName, new { @class = "form-control", @readonly = "readonly" })
+
+        @Html.LabelFor(m => m.ProductModel.pDescription, new { @class = "form-label label-text", @style = "padding-top: 30px;" })
+        @Html.TextBoxFor(m => m.ProductModel.pDescription, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.ProductModel.pQuantity, new { @class = "form-label label-text", @style = "padding-top: 30px;" })
+        @Html.TextBoxFor(m => m.ProductModel.pQuantity, new { @class = "form-control", @type = "number" })
+
+        @Html.LabelFor(m => m.ProductModel.pPrice, new { @class = "form-label label-text", @style = "padding-top: 30px;", @type = "number" })
+        @Html.TextBoxFor(m => m.ProductModel.pPrice, new { @class = "form-control", @type = "number" })
+
+        @Html.LabelFor(m => m.ProductModel.pBrand, new { @class = "form-label label-text", @style = "padding-top: 30px;" })
+        @Html.TextBoxFor(m => m.ProductModel.pBrand, new { @class = "form-control" })
+
+        <div class="mb-3" style="padding-top: 20px;">
+            <label for="pCategory" class="form-label label-text">Category: </label>
+            @Html.DropDownListFor(m => m.ProductModel.pCategory, Model.Categories, "Select Category", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ProductModel.pCategory, "", new { @style = "color:red;font-weight:bold" })
+        </div>
+
+        <div class="mt-4" id="btn">
+            <button type="submit" class="btn btn-primary btn-lg" id="btnUpdate">Update</button>
+        </div>
+    </div>
+}

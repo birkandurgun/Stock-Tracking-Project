@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="head"></div>
+
+    <nav class="nav flex-column bg-black pt-sm-5 pb-sm-5"
+         style="width: 15%;height: 100vh; align-items: flex-start;float: left;">
+        <a class="nav-link" href="@Url.Action("AddProduct", "Products")"><i class="fa-solid fa-plus-circle"></i> Add Product</a>
+        <a class="nav-link" href="@Url.Action("ProductList", "Products")"><i class="fa-solid fa-cubes"></i> Stock List</a>
+        <a class="nav-link" href="@Url.Action("AddCategory", "Category")"><i class="fa-solid fa-plus-circle"></i> Add Category</a>
+        <a class="nav-link" href="@Url.Action("CategoryList", "Category")"><i class="fa-solid fa-list"></i> Category List</a>
+        <a class="nav-link" href="@Url.Action("LogOut", "Login")"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+    </nav>
+
+
+            <div style="float: left;width: 80%;padding-top: 30px;">
+                @RenderBody()
+            </div>
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.8/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+                    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+                    crossorigin="anonymous"></script>
+        </body>
+
+        </html>

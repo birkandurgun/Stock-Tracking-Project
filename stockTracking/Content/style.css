@@ -1,0 +1,37 @@
+.head {
+    background-color: red;
+    height: 70px;
+}
+
+div.headd {
+    float: left;
+    width: 85%;
+    margin-top: 5px;
+    border-bottom: 3px solid lightgray;
+    padding-left: 20px;
+}
+
+div nav a i {
+    padding-right: 5px;
+}
+
+
+label.ürünEkle{
+    padding-left: 10px;
+}
+
+nav a{
+    width: 100%;
+}
+
+.nav-link{
+    color: white;
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+.nav-link:hover{
+    background-color: red;
+    width: 100%;
+    color: white;
+}
