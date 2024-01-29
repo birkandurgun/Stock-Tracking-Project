@@ -19,6 +19,9 @@
 5. **Filter:**
    - Users can filter data by entering search terms into the required search boxes.
 
+6. **Login and Register:**
+   - Allows users to register and registered users to log in
+
 # Screenshots
 
 ## Sign Up and Log In
