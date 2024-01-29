@@ -35,7 +35,10 @@
 
 ## Updating Product
 
-![updateProduct](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/updateProduct.png) ![updatedRow](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/updatedRow.png)
+![updateProduct](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/updateProduct.png) 
+<br/>
+<br/>
+![updatedRow](https://github.com/birkandurgun/Stock-Tracking-Project/blob/master/images/updatedRow.png)
 
 ## Filter
 
